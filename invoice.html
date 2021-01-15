@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoicing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            margin: 25px 130px;
+        }
+
+        .logo_header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .shop-info-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .client_info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .flight_info {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 130px;
+        }
+
+        .flight_info > div {
+            margin: 10px 0px;
+        }
+
+        .f_info_departure, .f_info_arrival {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .hotel_info {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 130px;
+        }
+
+        .hotel_info > div {
+            margin: 10px 0px;
+        }
+
+        .a_info, .a_info_check_in, .a_info_check_out {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0px;
+        }
+
+        .submit > input {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="invoice-form" action="./invoice1.html" method="POST">
+    <div class="logo_header">
+        <img class="logo" src="JakeTravelLogo.png" alt="" width="300px;">       
+        <div class="header_invoice">
+            <div class="shop-info-header">
+                <h1>INVOICE</h1>
+                <br>
+                <a href="./search-branch.html" 
+                target="popup" 
+                onclick="window.open('./search-branch.html','popup','width=500,height=400,scrollbars=no,resizable=no'); return false;"><i class="fas fa-search"> Search your branch</i></a>
+            </div> 
+                <div id="branch-name">
+                    <label for="b_name">Branch name:</label>
+                    <input type="text" name="b_name" id="b_name" placeholder="Jake's Travel Toronto Branch" size="35">
+                </div>
+                <br/>
+                <div id="branch-add">
+                    <label for="b_address">Company address:</label>
+                    <input type="text" name="b_address" id="b_address" placeholder="1 Young street, Toronto, ON, CANADA, A1A A1A " size="30">
+                </div>
+                <br/>
+                <div id="branch-tel">
+                    <label for="b_tel">Branch phone number:</label>
+                    <input type="tel" name="b_tel" id="b_tel" placeholder="555-555-5555" size="26">
+                </div>
+            
+            
+        </div>
+    </div>
+    <hr>
+    <h2>Client Info</h2>
+    <div class="client_info">
+        <div class="client_address">
+            <label for="c_address">Client Address:<br></label>
+            <textarea rows="3" name="c_address" id="c_address" placeholder="please enter client's billing address" cols="40" ></textarea>
+        </div>
+        <div class="client_name_tel">
+            <label for="c_name">Travel leader name:</label>
+            <input type="text" name="c_name" id="c_name" placeholder="Jake Baek" size="30">
+            <br>
+            <br>
+            <label for="c_tel">Travel leader phone number:</label>
+            <input type="tel" name="c_tel" id="c_tel" placeholder="555-555-5555" size="21" pattern="^\d{3}-\d{3}-\d{4}$" maxlength="14">
+        </div>
+    </div>
+    <br>
+    <hr>
+    <h2>Flight Info</h2>
+        <div class="flight_info">            
+            <div class="f_num">
+                <div>
+                    <label for="f_num">Flight Number:</label>
+                    <input type="text" name="f_num" id="f_num" placeholder="AC101" size="6">
+                </div>
+            </div>
+            <div class="f_info_departure">
+                <div>
+                    <label for="f_dep_airport">Departure Airport:</label>
+                    <input type="text" name="f_dep_airport" id="f_dep_airport" placeholder="YYZ" size="4">    
+                </div>  
+                <div>    
+                    <label for="f_dep_t">Departure Time:</label>
+                    <input type="time" name="f_dep_t" id="f_dep_t"  >
+                </div> 
+                <div>
+                    <label for="f_dep_d">Departure Date:</label>
+                    <input type="date" name="f_dep_d" id="f_dep_d"  >
+                </div>
+            </div>
+            <div class="f_info_arrival">
+                <div>
+                    <label for="f_arr_airport">Arrival Airport:</label>
+                    <input type="text" name="f_arr_airport" id="f_arr_airport" placeholder="YYZ" size="4">   
+                </div>     
+                <div>   
+                    <label for="f_arr_t">Arrival Time:</label>
+                    <input type="time" name="f_arr_t" id="f_arr_t"  >       
+                </div>   
+                <div> 
+                    <label for="f_arr_d">Arrival Date:</label>
+                    <input type="date" name="f_arr_d" id="f_arr_d"  >
+                </div> 
+            </div> 
+        </div>
+    <hr>
+    <h2>Accommodation Info</h2>
+        <div class="hotel_info">       
+            <div class="a_info">
+                <div>
+                    <label for="a_area">City/Area:</label>
+                    <input type="text" name="a_area" id="a_area" placeholder="Toronto" size="18">
+                </div>
+                <div>
+                    <label for="a_name">Hotel Name:</label>
+                    <input type="text" name="a_name" id="a_name" placeholder="Jake's Hotel" size="18">
+                </div>
+            </div>
+            <div class="a_info_check_in">
+                <div>
+                    <label for="check_in_d">Check-in Date:</label>
+                    <input type="date" name="check_in_d" id="check_in_d"  >
+                </div>
+                <div>
+                    <label for="check_in_t">Check-in Time:</label>
+                    <input type="time" name="check_in_t" id="check_in_t"  >
+                </div>
+            </div>
+            <div class="a_info_check_out">
+                <div>
+                    <label for="check_out_d">Check-out Date:</label>
+                    <input type="date" name="check_out_d" id="check_out_d"  >
+                </div>
+                <div>
+                    <label for="check_out_t">Check-out Time:</label>
+                    <input type="time" name="check_out_t" id="check_out_t"  >
+                </div>
+            </div>
+        </div>
+    <hr>
+    <div class="submit">
+        <input type="submit" value="Submit/Print">
+    </div>
+    </form>
+    <hr>
+    <footer>
+        Created by Jake B
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        let branchName;
+
+        function setData(name, addr, tel) {
+            $('#branch-name>input').attr("value", name);
+            $('#branch-add>input').attr("value", addr);
+            $('#branch-tel>input').attr("value", tel);
+        }
+        
+        $('form').submit((e) => {
+            e.preventDefault();
+            window.open('./invoice-print.html', 'formPopUp', 'width=1000,height=1400,resizeable,scrollbars');
+            this.target = 'formPopUp';
+        })
+
+
+    </script>
+</body>
+</html>

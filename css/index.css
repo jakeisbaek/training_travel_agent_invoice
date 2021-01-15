@@ -1,0 +1,375 @@
+@import "reset.css";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.reset_button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    color: aliceblue;
+    right: 30px;
+    cursor: pointer;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 20px;
+}
+
+.invoice_type {
+    grid-column: 1/10;
+    grid-row:1/2;
+}
+
+.flight, .all_inclusive, .cruise, .tour  {
+    grid-column: 2/9;
+    grid-row:2/3;
+    
+}
+
+.tour {
+    grid-column: 1/10;
+    grid-row:2/3;
+}
+
+.domestic, .mexico, .dr {
+    grid-column: 2/9;
+    grid-row:3/4;
+    
+}
+
+.transborder, .international, .cuba, .cruise_area  {
+    grid-column: 1/11;
+    grid-row:3/4;
+    
+}
+
+.invoice_type, .flight, .all_inclusive, .cruise, .tour, .domestic, .transborder, .international, .mexico, .dr, .cuba, .cruise_area {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.invoice_type > div {
+    width: 150px;
+    height: 120px;
+    margin: 25px;
+    border-radius: 10%;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.flight > div, .all_inclusive > div, .cruise > div, .tour > div, .domestic > div, .transborder > div, .international > div, .mexico > div, .dr > div, .cuba > div, .cruise_area > div {
+    width: 150px;
+    height: 120px;
+    margin: 25px;
+    border-radius: 10%;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.invoice_type > div:hover, .flight > div:hover, .all_inclusive > div:hover, .cruise > div:hover, .tour > div:hover, .domestic > div:hover, .transborder > div:hover, .international > div:hover, .mexico > div:hover, .dr > div:hover, .cuba > div:hover, .cruise_area > div:hover{
+    opacity: 0.5;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+.select_flight {
+    background-color: #FF5733;           
+}
+
+.select_all_inclusive {
+    background-color: #76D7C4;
+}
+
+.select_cruise {
+    background-color: #00CCEE;
+}
+
+.select_tour {
+    background-color: #D702E4;
+}
+
+
+.flight, .all_inclusive, .cruise, .tour, .domestic, .transborder, .international, .mexico, .dr, .cuba, .cruise_area  {
+    display: none;
+}
+
+.domestic_flight {
+    background-color: #E74C3C ;
+}
+
+.trans_border_flight {
+    background-color: #CB4335;
+}
+
+.international_flight {
+    background-color: #B03A2E;
+}
+
+.mexico_ai {
+    background-color: #82E0AA;
+}
+
+.dominica_ai {
+    background-color: #58D68D;
+}
+
+.cuba_ai {
+    background-color: #2ECC71;
+}
+
+.other_ai {
+    background-color: #1ABC9C;
+}
+
+.norwegian_cruise {
+    background-color: #85C1E9 ;
+}
+
+.royal_cruise {
+    background-color: #5DADE2;
+}
+
+.celebrity_cruise {
+    background-color: #3498DB ;
+}
+
+.other_cruise {
+    background-color: #2E86C1;
+}
+
+.tour_north_america {
+    background-color: #A569BD ;
+}
+
+.tour_latin_america {
+    background-color: #9B59B6;
+}
+
+.tour_asia {
+    background-color: #8E44AD ;
+}
+
+.tour_europe {
+    background-color: #7D3C98;
+}
+
+.tour_africa {
+    background-color: #884EA0;
+}
+
+.tour_other {
+    background-color: #6C3483;
+}
+
+.air_canada {
+    background-color: #A93226;
+}
+
+.westjet {
+    background-color: #943126;
+}
+
+.transat {
+    background-color: #922B21 ;
+}
+
+.domestic_others {
+    background-color: #7B241C;
+}
+
+.air_canada_trans {
+    background-color: #E74C3C;
+}
+
+.westjet_trans {
+    background-color: #CB4335;
+}
+
+.delta {
+    background-color: #B03A2E;
+}
+
+.united {
+    background-color: #943126;
+}
+
+.american {
+    background-color: #78281F;
+}
+
+.transborder_others {
+    background-color: #7B241C;
+}
+
+.star_alliance {
+    background-color: #E74C3C;
+}
+
+.sky_team {
+    background-color: #CB4335;
+}
+
+.one_world {
+    background-color: #B03A2E;
+}
+
+.international_others {
+    background-color: #943126;
+}
+
+.search_flight1 {
+    background-color: #E74C3C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.search_flight2 {
+    background-color: #CB4335;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.search_flight3 {
+    background-color: #B03A2E;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.cun {
+    background-color: #82E0AA;
+}
+
+.rmy {
+    background-color: #76D7C4;
+}
+
+.pvr {
+    background-color: #58D68D;
+}
+
+.mexico_others {
+    background-color: #2ECC71;
+}
+
+.puj {
+    background-color: #82E0AA;
+}
+
+.pop {
+    background-color: #76D7C4;
+}
+
+.romana {
+    background-color: #58D68D;
+}
+
+.dr_others {
+    background-color: #2ECC71;
+}
+
+.vra {
+    background-color: #82E0AA;
+}
+
+.hav {
+    background-color: #76D7C4;
+}
+
+.ccc {
+    background-color: #58D68D;
+}
+
+.snu {
+    background-color: #2ECC71;
+}
+
+.cuba_others {
+    background-color: #1ABC9C;
+}
+
+.caribbean {
+    background-color: #5DADE2;
+}
+
+.med {
+    background-color: #3498DB;        
+}
+
+.asia {
+    background-color: #2E86C1;
+}
+
+.alaska {
+    background-color: #2874A6;
+}
+
+.cruise_other_areas {
+    background-color: #1A5276;
+}
+
+.invoice_type > .question {
+    color: black;
+}
+
+.flight > .question2, .all_inclusive > .question2 , .cruise > .question2, .tour > .question2  {
+    color: black;
+}
+
+.domestic > .question3, .transborder > .question3, .international > .question3, .mexico > .question3, .dr > .question3, .cuba > .question3, .cruise_area > .question3 {
+    color: black;
+}
+
+footer {
+    text-align: center;
+    font-weight: 100;
+    font-size: 12px;
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}
