@@ -6,93 +6,7 @@
     <title>Invoicing</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        h1 {
-            font-size: 30px;
-        }
-
-        h2 {
-            margin: 25px 130px;
-        }
-
-        .logo_header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .shop-info-header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .client_info {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-
-        .flight_info {
-            display: flex;
-            flex-direction: column;
-            margin: 20px 130px;
-        }
-
-        .flight_info > div {
-            margin: 10px 0px;
-        }
-
-        .f_info_departure, .f_info_arrival {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .hotel_info {
-            display: flex;
-            flex-direction: column;
-            margin: 20px 130px;
-        }
-
-        .hotel_info > div {
-            margin: 10px 0px;
-        }
-
-        .a_info, .a_info_check_in, .a_info_check_out {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .submit {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 30px 0px;
-        }
-
-        .submit > input {
-            width: 200px;
-            height: 50px;
-            font-size: 20px;
-        }
-
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 30px 0px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="./css/invoice.css">
 </head>
 <body>
     <form id="invoice-form" action="./invoice1.html" method="POST">
@@ -225,21 +139,21 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
+    
         let branchName;
 
         function setData(name, addr, tel) {
             $('#branch-name>input').attr("value", name);
             $('#branch-add>input').attr("value", addr);
             $('#branch-tel>input').attr("value", tel);
-        }
-        
+        };
+
         $('form').submit((e) => {
             e.preventDefault();
-            window.open('./invoice-print.html', 'formPopUp', 'width=1000,height=1400,resizeable,scrollbars');
+            window.open('./invoice-print.html', 'formPopUp', 'width=1000,height=2000,resizeable,scrollbars');
             this.target = 'formPopUp';
-        })
-
-
+        });
+   
     </script>
 </body>
 </html>

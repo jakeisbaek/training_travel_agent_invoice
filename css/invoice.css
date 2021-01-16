@@ -4,36 +4,26 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    margin: 25px 130px;
+}
 
 .logo_header {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
 }
 
-.logo {
-    padding-top: 50px;
-}
-
-.header_invoice {
+.shop-info-header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-}
-
-.header_invoice > h2 {
-    align-self: flex-end;
-    font-size: 45px;
-}
-
-.header_address {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-
-hr {
-    margin: 40px;
+    align-items: center;
 }
 
 .client_info {
@@ -42,33 +32,54 @@ hr {
     justify-content: space-around;
 }
 
-.client_name_tel, .f_info {
+.flight_info {
     display: flex;
     flex-direction: column;
+    margin: 20px 130px;
 }
 
-.flight_info {
+.flight_info > div {
+    margin: 10px 0px;
+}
+
+.f_info_departure, .f_info_arrival {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.travel_info {
-    margin: 40px 120px;;
+.hotel_info {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 130px;
+}
+
+.hotel_info > div {
+    margin: 10px 0px;
+}
+
+.a_info, .a_info_check_in, .a_info_check_out {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .submit {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.submit > input {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
 }
 
 footer {
-    text-align: center;
-    font-weight: 100;
-    font-size: 12px;
-    margin-top: 50px;
-}
-
-a {
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
 }
